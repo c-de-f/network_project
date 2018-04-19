@@ -1,0 +1,107 @@
+#include "stdafx.h"
+#include <ctime>
+#include "Solver.h"
+
+#pragma once
+
+float OptSolver::solve() {
+	bool sch = true;
+	for (auto &i = p->tasks.begin(); (i != p->tasks.end()); i++) if (statuses[&i->second] != ::DONE) {
+		sch = false; break;
+	}
+	if (sch)
+	{
+		std::pair<std::map<std::string, Task>, float> m;
+
+		m.first = p->tasks;
+		m.second = p->makespan();
+		if ((m.second) < solution.second)
+		{
+			solution = m;
+			/*std::cout << std::endl << solution.second << std::endl;
+			for (auto k : solution.first) std::cout << k.start() << ' ';
+			std::cout << '\n';*/
+		}
+	}
+	//	if (iterations > 100000) return makespan;
+	if ((p->makespan() > solution.second)) return solution.second;
+	//std::cout << "La\n";
+	bool actives = false;
+	bool passives = false;
+
+	setStatuses();
+
+	//RESOURCELESS
+	for (auto &i = p->tasks.begin(); i != p->tasks.end(); i++)
+	{
+		Task* t = &i->second;
+
+		if ((statuses[t] == TaskStatus::ACTIVE) && (t->noResources()))
+		{
+			actives = true;
+
+			t->forceCalculating();
+			statuses[t] = TaskStatus::DONE;
+			setStatuses();
+	
+		}
+		
+		//solve();
+	}
+
+
+
+	std::vector<Task*> pool;
+	bool _sch = false;
+	int _r = r;
+	while ((!_sch) && (!pool.size())) {
+		 _sch = true;
+		for (auto &i : p->tasks)
+		{
+			Task* t = &i.second;
+			if (statuses[t] != ::DONE) _sch = false;
+			
+			if (statuses[t] == TaskStatus::ACTIVE)
+			{
+				actives = true;
+				if (t->usesResource(resources[r])) { pool.push_back(t); }
+			}
+
+			if (statuses[t] == TaskStatus::PASSIVE) passives = true;
+		}
+		r++;
+		if (r >= p->resources.size()) r = 0;
+	}
+	//if ((!_sch) && (!pool.size())) { int _r = r; r++; if (r >= p->resources.size()) r = 0; solve(); r = _r;  return makespan; }
+
+	for (auto i : pool)
+	{
+		tryTask(i);
+		setStatuses();
+	}
+
+
+
+	if (!actives)
+	{
+		if (!passives)
+		{
+			iterations++;
+			if (!(iterations % 10000)) std::cout << iterations << "  " << (clock() - timer) / CLOCKS_PER_SEC << '\n';
+
+			std::pair<std::map<std::string, Task>, float> m;
+
+			m.first = p->tasks;
+			m.second = p->makespan();
+			if ((m.second) < solution.second)
+			{
+				solution = m;
+				//std::cout << std::endl << solution.second << std::endl;
+
+			}
+		}
+		return solution.second;
+	}
+
+	//return INT32_MAX;
+}

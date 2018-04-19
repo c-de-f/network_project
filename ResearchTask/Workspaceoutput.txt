@@ -1,0 +1,471 @@
+PROBLEM Resource3_makespan11
+
+TASKS
+A 2 
+B 1
+C 2
+D 1
+E 2
+
+F 1
+G 2
+
+H 3
+END_TASKS
+
+LINKS
+A B
+B C
+C D
+D E
+END_LINKS
+
+
+RESOURCES
+R1 3
+R2 1
+END_RESOURCES
+
+ASSIGNMENTS
+R1 A 2
+R1 C 2
+R1 E 2
+
+R2 B 1
+R2 D 1
+
+R1 F 1
+R2 F 1
+R1 G 1
+R2 G 1
+R1 H 1
+R2 H 1
+
+END_ASSIGNMENTS
+
+END_PROBLEM
+:
+Calculated: NONE 9 1297
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 1297
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 5-6 5-6 5-6 3 1
+E 6-8 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 3-5 0-2 6-8 0 0
+H 6-9 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: LIS 9 365
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 365
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MIS 9 364
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 364
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MTS 9 365
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 365
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: LTS 9 313
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 313
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: LSC 9 287
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 287
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: SSC 9 281
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 281
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: SPT 9 269
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 269
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: LPT 9 268
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 268
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: GRPW 9 272
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 272
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MSLK 9 269
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 269
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MLST 9 269
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 269
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MLFT 9 268
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 268
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MFEST 9 272
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 272
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MFEFT 9 270
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 270
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MFFD 9 268
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 268
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: LFFD 9 359
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 359
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MTC 9 364
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 364
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MTR 9 322
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 322
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MTUR 9 271
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 271
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+Calculated: MRUR 9 270
+PROBLEM Resource3_makespan11
+STATISTICS 
+TASKS 8
+LINKS 4
+RESOURCES 2
+ASSIGNMENTS 11
+CPU 270
+END_STATISTICS 
+SCHEDULE 
+name s-f es-ef ls-lf prev next
+A 0-2 0-2 0-2 0 4
+B 2-3 2-3 2-3 1 3
+C 3-5 3-5 3-5 2 2
+D 6-7 5-6 5-6 3 1
+E 7-9 6-8 6-8 4 0
+F 0-1 0-1 7-8 0 0
+G 7-9 0-2 6-8 0 0
+H 3-6 0-3 5-8 0 0
+END_SCHEDULE 
+
+
+
+

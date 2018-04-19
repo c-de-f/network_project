@@ -1,0 +1,59 @@
+problem Test
+tasks
+A 2
+B 5
+C 3
+D 1
+end_tasks
+LINKS
+A B
+B C
+A C
+D B
+D C
+A D
+end_links
+end_problem
+
+if (n.size() == 1) { return n.at(0); }
+	std::map<float, float> p;
+	for (unsigned i = 0; i < n.size(); i++) {
+		for (unsigned j = 0; j < n[i].size(); j++) {
+			p[n[i][j].first] = -1;
+			p[n[i][j].second] = -1;
+		}
+	}
+	for (auto & x : p) {
+		bool full = true;
+		bool part = false;
+		if (x.second != -1) {
+			for (unsigned i = 0; i < n.size(); i++) {
+				bool d = false;
+				for (unsigned j = 0; j < n[i].size(); j++) {
+					if ((n[i][j].first <= x.first) && (n[i][j].second > x.first)) {
+						if (n[i][j].second > x.first) { part = true; }
+						d = true;
+					}
+				}
+				if (d == false) { full = false; break; }
+			}
+			if (full) {
+				if (part) {
+					x.second = 0;
+				}
+				else {
+					x.second = 1;
+				}
+			}
+		} else {
+			x.second = 0;
+		}
+	}
+
+	std::vector<std::pair<float, float>> r;
+	bool l = false;
+	float t = 0.0;
+	for (auto & x : p) {
+		if (x.second == 1) { t = x.second; l = true; }
+		if (x.second == 0 && l) { r.push_back(std::pair<float,float>(t, x.second)); l = false; }
+	}
